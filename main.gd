@@ -1,4 +1,4 @@
-extends Node2D
+extends Node3D
 const ENUMS = preload("res://enums.gd")
 
 var expections = [ENUMS.INJURY.BLACKEDOUT]
@@ -61,7 +61,7 @@ func update_condition_log(condition: Dictionary):
 
 		if injuries.size() > 0:
 			for i in injuries:
-				logs += "[b]%s[/b], " % get_enum_name(ENUMS.INJURY, i) #idunow how it works but it works
+				logs += "[b]%s[/b], " % get_enum_name(ENUMS.INJURY, i)
 		else:
 			logs += "No injuries"
 		logs += "\n"

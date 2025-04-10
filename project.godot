@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="helth"
+config/name="helth3d"
 run/main_scene="uid://b0nmdbhojym5q"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

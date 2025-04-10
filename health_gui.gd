@@ -65,7 +65,6 @@ func get_enum_name(enum_dict: Dictionary, value: int) -> String:
 		if enum_dict[named] == value:
 			return named
 	return "Unknown"
-#if you need it, it's here
 #func update_condition_log(condition: Dictionary):
 	#var log = ""
 	#for part in condition.keys():
