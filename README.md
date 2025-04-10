@@ -4,7 +4,7 @@ A Tarkov-like health system built with Godot 4
 ## So what this project does?
 
 1. Simulates individual damage for each body part (head, thorax, stomach, arms, legs, etc.)
-2. Supports multiple injury types: bleeding, fractures, pain, blackouts, and more
+2. Supports multiple injury types: bleeds, fractures, pain, blackouts, and more
 3. Health is tracked per body part with max HP values and injury lists
 4. Visual feedback via `ColorRect` nodes that change color based on health
 5. Bleeding and other injuries apply damage over time (tick-based system)
