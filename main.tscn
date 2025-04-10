@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0nmdbhojym5q"]
+
+[ext_resource type="Script" uid="uid://3q8r07cvxqjo" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://drshkg0gc15cb" path="res://health_gui.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="HealthGUI" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="LimbSelector" type="OptionButton" parent="."]
+offset_left = 143.0
+offset_top = 10.0
+offset_right = 284.0
+offset_bottom = 41.0
+
+[node name="InjurySelector" type="OptionButton" parent="."]
+offset_left = 388.0
+offset_top = 10.0
+offset_right = 529.0
+offset_bottom = 41.0
+
+[node name="Apply" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 76.0
+offset_right = 364.0
+offset_bottom = 107.0
+text = "Apply"
+
+[node name="DamageAmount" type="LineEdit" parent="."]
+offset_left = 556.0
+offset_top = 10.0
+offset_right = 831.0
+offset_bottom = 41.0
+placeholder_text = "Inflict damage"
+clear_button_enabled = true
+
+[node name="Apply2" type="Button" parent="."]
+offset_left = 657.0
+offset_top = 63.0
+offset_right = 709.0
+offset_bottom = 94.0
+text = "Apply"
+
+[node name="DamageAmount2" type="LineEdit" parent="."]
+offset_left = 840.0
+offset_top = 10.0
+offset_right = 1115.0
+offset_bottom = 41.0
+placeholder_text = "Heal damage"
+clear_button_enabled = true
+
+[node name="Apply3" type="Button" parent="."]
+offset_left = 941.0
+offset_top = 63.0
+offset_right = 993.0
+offset_bottom = 94.0
+text = "Apply"
+
+[node name="ItemSelector" type="OptionButton" parent="."]
+offset_left = 461.0
+offset_top = 145.0
+offset_right = 602.0
+offset_bottom = 176.0
+
+[node name="Apply4" type="Button" parent="."]
+offset_left = 505.0
+offset_top = 191.0
+offset_right = 557.0
+offset_bottom = 222.0
+text = "Apply"
+
+[node name="ConditionText" type="Label" parent="."]
+offset_left = 699.0
+offset_top = 235.0
+offset_right = 1444.0
+offset_bottom = 412.0
+autowrap_mode = 3
+
+[node name="GetCondition" type="Button" parent="."]
+offset_left = 740.0
+offset_top = 578.0
+offset_right = 915.0
+offset_bottom = 609.0
+text = "Get current condition"
+
+[node name="StatusLog" type="RichTextLabel" parent="."]
+offset_left = 44.0
+offset_top = 324.0
+offset_right = 535.0
+offset_bottom = 638.0
+bbcode_enabled = true
+
+[connection signal="pressed" from="Apply" to="." method="_on_apply_pressed"]
+[connection signal="pressed" from="Apply2" to="." method="_on_apply_2_pressed"]
+[connection signal="pressed" from="Apply3" to="." method="_on_apply_3_pressed"]
+[connection signal="pressed" from="Apply4" to="." method="_on_apply_4_pressed"]
+[connection signal="pressed" from="GetCondition" to="." method="_on_get_condition_pressed"]
