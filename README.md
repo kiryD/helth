@@ -37,6 +37,9 @@ A Tarkov-like health system built with Godot 4
 - Infection system
 - Networking support for multiplayer
 
+## Main problem
+Main problem of this project is that user have to implement heal items.
+
 ## Try it out
 
 Just run the main scene in Godot 4. All buttons for testing are there!
