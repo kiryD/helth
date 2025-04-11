@@ -28,7 +28,7 @@ func get_random_value_of_dict(dict: Dictionary):
 	var keys = dict.keys()
 	return dict[keys[randi_range(0, keys.size() - 1)]]
 
-func add_injury(bodypart: ENUMS.BODYPARTS, injury: ENUMS.INJURY):
+func add_injury(bodypart: ENUMS.BODYPARTS, injury: ENUMS.INJURY) -> void:
 	print("Received: ", get_enum_name(ENUMS.INJURY, injury))
 	if not condition.has(bodypart):
 		push_error("Invalid bodypart: " + str(bodypart))
@@ -41,7 +41,7 @@ func add_injury(bodypart: ENUMS.BODYPARTS, injury: ENUMS.INJURY):
 		print("Injury already present in ", get_enum_name(ENUMS.BODYPARTS, bodypart))
 	emit_signal("injury_changed", bodypart, part_data["injuries"])
 
-func inflict_damage(bodypart: ENUMS.BODYPARTS, amount:int):
+func inflict_damage(bodypart: ENUMS.BODYPARTS, amount:int) -> void:
 	print("Received damage: ", get_enum_name(ENUMS.BODYPARTS, bodypart), " -" + str(amount))
 	var part_data = condition[bodypart]
 	part_data["health"] -= amount
@@ -50,7 +50,7 @@ func inflict_damage(bodypart: ENUMS.BODYPARTS, amount:int):
 		part_data["health"] = 0
 	emit_signal("health_changed", bodypart, part_data["health"])
 
-func heal_damage(bodypart: ENUMS.BODYPARTS, amount:int):
+func heal_damage(bodypart: ENUMS.BODYPARTS, amount:int) -> void:
 	print("Received heal: ", get_enum_name(ENUMS.BODYPARTS, bodypart), " +" + str(amount))
 	var part_data = condition[bodypart]
 	if part_data["injuries"].has(ENUMS.INJURY.BLACKEDOUT): return
