@@ -37,7 +37,12 @@ A Tarkov-like health system built with Godot 4
 - Infection system
 - Networking support for multiplayer
 
+## Project future
+- As of 11<sup>th</sup> April, I have exams, so for some long time project will be abadoned(i think)
+- Why not 0.1.0/0.0.1/1.0? So, first release was not ready to public. Like it didn't have return types, and I just didn't like it. Actually it just kinda beta/prerelease
+
 ## Main problem
+
 Main problem of this project is that user have to implement heal items.
 
 ## Try it out
