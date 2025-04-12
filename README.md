@@ -24,6 +24,7 @@ A Tarkov-like health system built with Godot 4
 2. `inflict_damage(bodypart: ENUMS.BODYPARTS, amount:int) -> void` - Inflicts damage to bodypart
 3. `heal_damage(bodypart: ENUMS.BODYPARTS, amount:int) -> void` - Heals damage *(restores health)* in bodypart
 4. `heal_injury(bodypart: int, item: int) -> bool` - Heals and injury. If can heal it, than injury healed, return true; Else if cann't heal it, return false.
+
 ## Structure
 
 - `Health.gd` – manages body part health and injuries
@@ -34,9 +35,8 @@ A Tarkov-like health system built with Godot 4
 
 ## Planned
 
-- Infection system
-- Networking support for multiplayer
-
+- Currently no ideas
+  
 ## Main problem
 
 Main problem of this project is that user have to implement heal items.
